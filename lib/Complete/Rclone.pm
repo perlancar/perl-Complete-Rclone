@@ -87,7 +87,6 @@ $SPEC{complete_rclone_remotes} = {
 };
 sub complete_rclone_remotes {
     require Complete::Util;
-    require Chrome::Util::Profile;
 
     my %args = @_;
 
