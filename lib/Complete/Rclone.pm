@@ -11,7 +11,7 @@ use warnings;
 
 use Exporter 'import';
 our @EXPORT_OK = qw(
-                       complete_rclone_remotes
+                       complete_rclone_remote
                );
 
 our %SPEC;
@@ -68,7 +68,7 @@ sub _parse_rclone_config {
 }
 
 
-$SPEC{complete_rclone_remotes} = {
+$SPEC{complete_rclone_remote} = {
     v => 1.1,
     summary => 'Complete from a list of configured rclone remote names',
     args => {
@@ -85,7 +85,7 @@ $SPEC{complete_rclone_remotes} = {
     },
     result_naked => 1,
 };
-sub complete_rclone_remotes {
+sub complete_rclone_remote {
     require Complete::Util;
 
     my %args = @_;
