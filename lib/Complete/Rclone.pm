@@ -22,7 +22,7 @@ our %argspecs_common = (
         tags => ['category:configuration'],
     },
     config_dirs => {
-        schema => ['array*', of=>'filename*'],
+        schema => ['array*', of=>'dirname*'],
         tags => ['category:configuration'],
     },
 );
@@ -79,6 +79,7 @@ $SPEC{complete_rclone_remote} = {
         },
         %argspecs_common,
         type => {
+            summary => 'Only list remotes of a certain type (e.g. "drive" for Google Drive, "google photos" for Google Photos)',
             schema => 'str*',
             tags => ['category:filtering'],
         },
